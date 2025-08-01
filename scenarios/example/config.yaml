@@ -1,0 +1,22 @@
+world:
+  description: |
+    The world is at a fragile peace. Two nations, Alpha and Beta, have tense relations.
+  metrics:
+    stability: 50
+    resources: 100
+actors:
+  Alpha:
+    llm:
+      model: openai/gpt-3.5-turbo
+      system_prompt: |
+        You represent nation Alpha. Consider your strategic goals carefully.
+  Beta:
+    llm:
+      model: openai/gpt-3.5-turbo
+      system_prompt: |
+        You represent nation Beta. Act in your nation's interest.
+game_master:
+  llm:
+    model: openai/gpt-4-turbo
+    system_prompt: |
+      You are the impartial game master. Update the world state based on actor actions.
