@@ -29,10 +29,10 @@ class Actor:
 
         history = "\n".join(self.notes)
         prompt = (
-            "You are taking part in a scenario-based exercise."\
-            "\n\nPrevious private notes:\n" + history +
-            "\n\nWorld state:\n" + world_state +
-            "\n\nGame log so far:\n" + log +
+            "You are taking part in a scenario-based exercise." +
+            f"\n\nPrevious private notes:\n{history}" +
+            f"\n\nWorld state:\n{world_state}" +
+            f"\n\nGame log so far:\n{log}" +
             "\n\nDescribe your next action in character."
         )
         action = self.llm.complete(prompt)
